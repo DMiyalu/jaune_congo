@@ -1,0 +1,32 @@
+/* all */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* header */section
+header {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.nav_top {
+	background-color: #E9FA00;
+	height: 45px;
+}
+
+.nav_bottom {
+	background-color: #FFFFFF;
+	height: 70px;
+}
+
+/* section */
+main {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.section-annonce {
+	background-image: url("https://jaunecongo.com/wp-content/uploads/2019/07/DSC03612-e1565954484396.jpg");
+	height: 800px;
+}

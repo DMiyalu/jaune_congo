@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaune Congo | Jaune Congo</title>
+</head>
+
+<body>
+    <h1>Jaune Congo</h1>
+
+    <% for(let produit of produits) {%>
+    <ul>
+        <li><a href="/produits/<%= produit.id %>">
+            <%= produit.name %>
+        </a></li>
+        <li><%= produit.prixKilo %></li>
+        <li><%= produit.qteDispo %></li>
+        <li>Ajouter au panier</li>
+    </ul>
+    <% } %>
+
+</body>
+
+</html>
