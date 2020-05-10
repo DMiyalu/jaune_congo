@@ -2,31 +2,262 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 /* header */section
 header {
-	display: grid;
-	grid-template-columns: 1fr;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
 }
+
+header a {
+	text-decoration: none;
+	color: black;
+}
+
+/* header nav-top */
 
 .nav_top {
-	background-color: #E9FA00;
-	height: 45px;
+	background-color: rgb(255, 230, 0);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	color: black;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
 }
 
+.nav_top .nav-hover:hover {
+	cursor: pointer;
+	background: rgba(99, 98, 98, 0.137);
+	transition: .5s;
+} 
+
+.nav_top .nav-top-left {
+	flex: 1;
+	padding-left: 115px;
+	height: 100%;
+}
+
+.nav_top .nav-top-left div {
+	width: 220px;
+	text-align: center;
+	height: inherit;
+	padding-top: 15px;
+}
+
+.nav-top-center {
+	flex: 3;
+	padding-left: 30%;
+	height: 100%;
+}
+.nav-top-center ul {
+	list-style: none;
+	height: 100%;
+}
+
+.nav-top-center ul li {
+	margin: 0;
+	display: inline-block;
+	text-align: center;
+	height: inherit;
+	padding-top: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.nav-top-center ul li .social-link {
+	word-spacing: 5px;
+	display: flex;
+}
+
+
+/* header nav-top infos bulle */
+
+.tooltip {
+	position: relative;
+	height: max-content;
+	margin-right: 5px;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1s;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+    top: -30px;
+    left: 10%;
+    width: 150px;
+    height: 30px;
+    background: rgb(85, 78, 78);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(85, 78, 78) transparent transparent transparent;
+  }
+
+
+/* header nav-bottom */
 .nav_bottom {
+	display: flex;
+	flex-direction: row;
 	background-color: #FFFFFF;
-	height: 70px;
+	height: 80px;
+	overflow: hidden;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
 }
 
-/* section */
+.nav_bottom .nav-bottom-left {
+	flex: 2;
+	height: 100%;
+	text-align: center;
+}
+
+.nav_bottom .nav-bottom-left .image-logo {
+	height: 100%;
+	width: 130px;
+	margin-left: 37%;
+}
+
+.nav_bottom .nav-bottom-left img {
+	max-width: 100%;
+  	height: 100%;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 100%;
+}
+
+.nav_bottom .nav-bottom-center {
+	flex: 5;
+	margin-left: 5px;
+}
+.nav_bottom .nav-bottom-center ul {
+	list-style: none;
+	padding-left: 20px;
+}
+.nav_bottom .nav-bottom-center ul li {
+	margin: 0;
+	display: inline-block;
+	text-align: center;
+	height: inherit;
+	padding-top: 28px;
+	padding-right: 20px;
+}
+.nav_bottom .nav-bottom-right ul {
+	list-style: none;
+}
+.nav_bottom .nav-bottom-right ul li {
+	margin: 0;
+	display: inline-block;
+	text-align: center;
+	height: inherit;
+	padding-top: 28px;
+	padding-left: 16px;
+}
+
+.nav_bottom .nav-bottom-right {
+	flex: 3;
+}
+
+.nav_bottom .nav-bottom-right .line-bar {
+	background: rgb(143, 140, 140);
+	opacity: 0.3;
+	padding-left: 1px;
+	height: 100%;
+}
+
+
+
+/*  main */
 main {
 	display: grid;
 	grid-template-columns: 1fr;
+	width: 100%;
+	margin: 0;
 }
+
 
 .section-annonce {
 	background-image: url("https://jaunecongo.com/wp-content/uploads/2019/07/DSC03612-e1565954484396.jpg");
-	height: 800px;
+	background-blend-mode: darken;
+  	height: 500px; 
+  	background-position: center; 
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	width: 100%;
+    padding: 0 130px;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
 }
+.section-annonce .annonce-top {
+	border: 1px solid red;
+	width: 235px;
+	height: 126px;
+	align-items: center;
+}
+.section-annonce .annonce-top .image-annonce {
+  	height: 100%;
+  	width: 100%;
+}
+.section-annonce .annonce-top .image-annonce img {
+	max-width: 100%;
+  	height: 100%;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 100%;
+}
+
+
+.section-annonce .annonce-middle {
+	border: 1px solid blue;
+	height: 55px;
+	max-width: 400px;
+	padding-top: 15px;
+}
+.section-annonce .annonce-middle p {
+	color: white;
+	font-weight: bold;
+	font-style: italic;
+	font-family: 'Montserrat', sans-serif;
+}
+.section-annonce .annonce-bottom {
+	border: 1px solid blueviolet;
+}
+
+
+  /* image réactive et centrée
+  
+img {
+	max-width: 100%;
+  	height: auto;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+}
+
+ 
+  */
